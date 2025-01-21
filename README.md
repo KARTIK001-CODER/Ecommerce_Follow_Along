@@ -17,3 +17,27 @@ Project Overview:-
 7.Product Page: Interactive product catalog with search, filter, and details view.
 
 8.Payment Gateway:Seamless integration with Stripe/PayPal for secure transactions, Handles payment success, failure, and refunds.
+
+
+
+>New Feature Added:
+
+-->Login Page:
+A user-friendly login page has been added, featuring:
+Email and password validation.
+A "Show/Hide Password" toggle for enhanced user experience.
+Error handling for invalid email format and password length.
+Loading state to indicate the process of authentication.
+Navigation to a signup page for new users.
+
+-->Technologies Used:
+React (Frontend)
+Tailwind CSS (Styling)
+React Router (Routing)
+Express.js (Backend)
+Stripe/PayPal (Payment Gateway)
+
+-->Installation & Setup:
+Clone the repository.
+Run npm install to install dependencies.
+Start the development server with npm start.
