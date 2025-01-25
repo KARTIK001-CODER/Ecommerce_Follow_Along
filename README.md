@@ -104,6 +104,34 @@ During this milestone, your mentor will guide you through:
 - Configuring the server and connecting to MongoDB.
 - Writing and testing error-handling code.
 
+# Milestone 4: User Management with File Uploads
+
+This Node.js application demonstrates user creation, file uploads using Multer, and secure password management using bcrypt and JWT.
+
+## Features
+
+- **User Registration**: Securely create users with hashed passwords.
+- **File Upload**: Upload user avatars with unique filenames.
+- **JWT Authentication**: Generate and validate JSON Web Tokens.
+- **Error Handling**: Robust error management using a custom ErrorHandler utility.
+
+## Technologies Used
+
+- **Node.js** with **Express.js**
+- **Mongoose** for MongoDB
+- **Multer** for file uploads
+- **bcrypt.js** for password hashing
+- **jsonwebtoken** for authentication
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js installed
+- MongoDB instance running
+- `.env` file with the following variables:
+
+
 # Milestone 5 -Adding SignUp Page
 
 1. Created a Sign-Up Page in React.
