@@ -4,6 +4,9 @@ const User = require('../model/user');
 const router = express.Router();
 const {upload}=require('../multer');
 const ErrorHandler = require('../utils/ErrorHandler');
+const catchAsyncErrors = require('../middleware/catchAsyncError');
+const jwt = require('jsonwebtoken');
+const sendMail = require('../utils/sendMail');
 
 //create user
 router.post(
