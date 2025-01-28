@@ -219,3 +219,50 @@ Milestone 6 expands on the knowledge gained in previous milestones, focusing on 
 - Explore GraphQL for alternative API design.
 - Learn about microservices architecture and its implementation.
 - Delve into DevOps concepts for deployment and monitoring.
+
+
+# Milestone 7: User Login Endpoint 🌟
+
+### Overview
+In this milestone, we created a backend endpoint for user login functionality. The focus was on validating user credentials and securely verifying the encrypted passwords stored in the database.
+
+### Key Achievements 🎯
+- **Validated User Credentials**: Implemented functionality to accept and process user login requests.
+- **Encrypted Password Verification**: Used bcrypt to securely compare hashed passwords stored in the database with the user’s input.
+- **Error Handling**: Added robust error handling for scenarios where users are not found or the password does not match.
+
+### Why Password Encryption Matters
+- **Protect User Data**: Ensures that passwords remain secure even if the database is compromised.
+- **Privacy**: Prevents plain-text storage of sensitive information.
+- **Compliance**: Meets security standards like GDPR and PCI-DSS.
+- **Prevents Password Theft**: Hashing makes it nearly impossible for attackers to reverse-engineer passwords.
+
+---
+
+## How Login Authentication Works 🔑
+1. **User Enters Credentials**:
+   - The user provides their email/username and password on the login page.
+
+2. **Fetch User Data from Database**:
+   - The backend retrieves the user record based on the provided email/username.
+   - If the user is not found, an error is returned: `"User does not exist."`
+
+3. **Compare Encrypted Passwords**:
+   - Hash the user's input password using the same algorithm (e.g., bcrypt).
+   - Compare the resulting hash with the stored hashed password.
+   - Authenticate the user if the hashes match; otherwise, return an error.
+
+---
+
+## Steps Implemented in Milestone 7 📝
+1. **Login Endpoint**:
+   - Created a backend route to handle user login requests.
+   - Accepted `email/username` and `password` as inputs.
+
+2. **Password Validation**:
+   - Used bcrypt to securely hash and compare passwords.
+   - Returned appropriate success or failure responses.
+
+3. **Database Interaction**:
+   - Retrieved user data from the database based on the input credentials.
+   - Verified if the user exists and validated their credentials.
