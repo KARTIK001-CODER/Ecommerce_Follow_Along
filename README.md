@@ -266,3 +266,21 @@ In this milestone, we created a backend endpoint for user login functionality. T
 3. **Database Interaction**:
    - Retrieved user data from the database based on the input credentials.
    - Verified if the user exists and validated their credentials.
+
+
+
+# Milestone 8
+
+🎯 Milestone 8: Building a Product Card Component & Structuring the Homepage
+
+📌 Objective
+
+This milestone focuses on enhancing the UI by designing a reusable product card component and setting up an organized homepage to display product listings effectively.
+
+🔍 Key Takeaways
+
+Develop a product card component to display essential product details.
+
+Render multiple product cards dynamically using props and mapping.
+
+Create an engaging homepage layout with proper structuring.   
