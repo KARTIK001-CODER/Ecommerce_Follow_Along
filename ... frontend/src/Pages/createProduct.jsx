@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { AiOutlinePlusCircle } from "react-icons/ai";
+import axios from "axios";
 
 const CreateProduct = () => {
   const [images, setImages] = useState([]);
@@ -28,31 +29,58 @@ const CreateProduct = () => {
     setPreviewImages((prevPreviews) => prevPreviews.concat(imagePreviews));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    const productData = {
-      name,
-      description,
-      category,
-      tags,
-      price,
-      stock,
-      email,
-      images,
-    };
 
-    console.log("Product Data:", productData);
+    const formData = new FormData();
+    formData.append("name", name);
+    formData.append("description", description);
+    formData.append("category", category);
+    formData.append("tags", tags.trim()); // Ensure tags are a comma-separated string
+    formData.append("price", price);
+    formData.append("stock", stock);
+    formData.append("email", email);
 
-    // Clear the form after submission
-    setImages([]);
-    setName("");
-    setDescription("");
-    setCategory("");
-    setTags("");
-    setPrice("");
-    setStock("");
-    setEmail("");
-  };
+    // Ensure images are appended correctly
+    images.forEach((image, index) => {
+        console.log(`Appending image ${index + 1}:, image.name`);
+        formData.append("images", image);
+    });
+
+    // Debugging FormData content
+    console.log("FormData before sending:");
+    formData.forEach((value, key) => {
+        console.log(key, value);
+    });
+
+    try {
+        const response = await axios.post(
+            "http://localhost:8000/api/v2/product/create-product",
+            formData,
+            {
+                headers: {
+                    "Content-Type": "multipart/form-data",
+                },
+            }
+        );
+
+        if (response.status === 201) {
+            alert("Product created successfully!");
+            setImages([]);
+            setPreviewImages([]);
+            setName("");
+            setDescription("");
+            setCategory("");
+            setTags("");
+            setPrice("");
+            setStock("");
+            setEmail("");
+        }
+    } catch (err) {
+        console.error("Error creating product:", err.response?.data || err.message);
+        alert(err.message);
+    }
+};
 
   return (
     <div className="w-[90%] max-w-[500px] bg-white shadow h-auto rounded-[4px] p-4 mx-auto">

@@ -311,3 +311,32 @@ React: Functional components and hooks (useState, useEffect).
 Tailwind CSS: For styling.
 
 React Icons: AiOutlinePlusCircle for the image upload button.
+
+
+# Milestone 10: Writing Mongoose Schema for Products
+
+🚀 Overview
+
+In this milestone, we will create a Mongoose schema for products and implement an endpoint to store product details in MongoDB. This will help us define the product structure, validate the data, and ensure data integrity.
+
+🎯 Learning Goals
+
+By completing this milestone, you will:
+
+Learn how to write a Mongoose schema for products.
+
+Learn how to create an endpoint to validate and store product details in MongoDB.
+
+📝 Product Schema
+
+We will define the structure of product data using Mongoose. The schema will include:
+
+name (String, required)
+
+description (String, required)
+
+price (Number, required, must be positive)
+
+imageURL (String, required, must be a valid URL)
+
+Example Schema Code:
