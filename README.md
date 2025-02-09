@@ -339,4 +339,39 @@ price (Number, required, must be positive)
 
 imageURL (String, required, must be a valid URL)
 
-Example Schema Code:
+
+# Milestone 11: Product Data Integration
+
+## Overview
+
+This milestone demonstrates how to send product data from a backend API to the frontend, retrieve the data, and dynamically display it using reusable product card components. It focuses on improving your understanding of data fetching, API integration, and dynamic UI rendering.
+
+## Features
+
+**API Integration:**
+
+Backend API endpoint that provides all product data in JSON format.
+
+**Frontend Data Fetching:**
+
+A function that retrieves the product data from the backend API.
+
+**Dynamic UI Rendering:**
+
+Product data is dynamically passed to a reusable product card component and displayed in a clean layout.
+
+## Instructions
+
+**Backend:**
+
+Create an API endpoint to fetch product data.
+Ensure the endpoint returns a structured JSON response.
+
+**Frontend:**
+
+Write a function to fetch the product data using the API endpoint.
+Dynamically map the fetched data to product card components.
+
+**Display:**
+
+Render the product cards in a grid or list format for a user-friendly interface.

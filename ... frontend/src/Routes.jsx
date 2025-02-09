@@ -1,5 +1,5 @@
-import LoginPage from "./Pages/Login";
-import SignupPage from "./Pages/SignUp";
-import CreateProduct from "./Pages/createProduct";
-import Home from "./Pages/Home";
+import LoginPage from "./pages/Login";
+import SignupPage from "./pages/SignUp";
+import CreateProduct from "./pages/createProduct";
+import Home from "./pages/Home";
 export {LoginPage, SignupPage, CreateProduct , Home};     

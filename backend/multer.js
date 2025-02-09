@@ -1,5 +1,3 @@
-// backend/multer.js
-
 const multer = require("multer");
 const path = require("path");
 const fs = require("fs");
@@ -42,11 +40,6 @@ const pstorage = multer.diskStorage({
   },
 });
 
-// Initialize upload handlers
-const upload = multer({ storage: storage });
-const pupload = multer({ storage: pstorage });
-
-module.exports = {
-  upload,
-  pupload,
-};
+// Initialize upload object
+exports.upload = multer({ storage: storage });
+exports.pupload = multer({ storage: pstorage });
