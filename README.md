@@ -375,3 +375,85 @@ Dynamically map the fetched data to product card components.
 **Display:**
 
 Render the product cards in a grid or list format for a user-friendly interface.
+
+# Milestone 12: Product Page with Email-Based Filtering
+## Project Overview
+In this milestone, we focus on implementing a dynamic product page that filters and displays products based on the email ID with which they were registered. This functionality aims to provide a personalized experience for users, ensuring that only the products associated with their accounts are visible to them. This feature is essential for enhancing user interaction and security within the application.
+
+## Key Features
+Email-Based Filtering
+
+Products are displayed based on the email ID of the user who registered them.
+Enhances data privacy by restricting access to products only to the email they are linked with.
+Dynamic Product Display
+
+A clean and responsive UI to showcase products.
+Seamless updates as the logged-in user's email changes.
+Scalability
+
+Designed to accommodate additional filters in the future (e.g., categories, tags, or price range).
+Ease of Integration
+
+Fits seamlessly with the existing backend and frontend architecture.
+
+## Objectives
+To develop a robust and secure product filtering mechanism using user email IDs.
+To ensure the user interface remains clean, user-friendly, and responsive.
+To integrate the feature efficiently into the current project without breaking existing functionality.
+To create a foundation for more advanced filtering and personalization features in future milestones.
+Implementation Details
+## Backend Enhancements
+### API Development:
+The backend will provide an endpoint to fetch products filtered by email. This ensures that only relevant data is sent to the frontend, minimizing unnecessary data transfer.
+
+### Data Security:
+To maintain security, the filtering logic will validate email inputs and ensure they match the logged-in user's email.
+
+### Database Updates:
+Ensure the product database schema includes an email field, which will store the email ID used during product registration. This field will act as the primary filter for the feature.
+
+## Frontend Integration
+### Dynamic Filtering:
+The frontend will consume the API and display products based on the logged-in user's email. The email will be passed as a query parameter to the API when fetching data.
+
+### User Interface:
+The product page will feature a simple, responsive design to display the filtered product list. Additional elements such as search bars or category filters can be added later for improved user experience.
+
+### Error Handling:
+Error messages will be displayed if there are no products associated with the email or if the API call fails. This ensures clear communication with the user.
+
+## Benefits
+### Personalized User Experience:
+Users can view and manage only the products they have registered, creating a more customized and secure environment.
+
+### Improved Privacy:
+By filtering products based on email, the system ensures data is only accessible to the appropriate user.
+
+### Scalability:
+The feature is designed to accommodate additional filters in the future, making the application more robust and feature-rich over time.
+
+### Enhanced Usability:
+A dedicated product page with email-based filtering makes it easier for users to manage their products, boosting overall satisfaction.
+
+## Testing and Validation
+### Manual Testing:
+
+Register products using different email IDs.
+Log in with a specific email and verify that only products associated with that email are displayed.
+### Edge Case Handling:
+
+Test with no products linked to the logged-in email to ensure appropriate messaging is displayed.
+Validate behavior when invalid email inputs are used.
+### Load Testing:
+
+Test the API and frontend with a large dataset of products to ensure performance remains optimal.
+## Challenges
+### Handling Large Datasets:
+With a significant number of products, implementing efficient filtering mechanisms is crucial to avoid performance bottlenecks.
+
+### User Authentication:
+Ensuring that the email-based filtering mechanism is securely linked to the authenticated user is critical for data security.
+
+### Error Messaging:
+Providing meaningful and user-friendly error messages in scenarios such as API failures or empty product lists.
+
