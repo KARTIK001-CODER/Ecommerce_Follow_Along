@@ -517,3 +517,45 @@ Security: Ensures that only authorized users can perform update operations.
 
 Performance: Efficient querying and updating mechanisms to minimize response time.
 
+
+# Ecommerce Project: Milestone 14
+
+## Overview
+
+Milestone 14 introduces the delete product feature, enabling the removal of products from the ecommerce platform. This functionality empowers administrators or authorized users to manage the product catalog effectively by removing outdated or irrelevant items.
+
+## Objectives
+
+Develop an endpoint to allow the deletion of products by their unique identifiers.
+
+Ensure robust error handling and validation to prevent unintended deletions.
+
+Provide meaningful feedback to the user for both successful and failed delete operations.
+
+## Features Added
+
+1. Delete Product Feature
+
+Users can delete a product by providing its unique ID in the request.
+
+Removes the product from the database permanently if the ID is valid and the product exists.
+
+2. Validation and Error Handling
+
+Checks whether the provided ID corresponds to an existing product.
+
+Ensures that only valid IDs are processed.
+
+Returns detailed error messages for scenarios such as:
+
+Product not found.
+
+Invalid or malformed product ID.
+
+3. Secure and Efficient Implementation
+
+Includes safeguards to ensure that deletion requests are authorized.
+
+Implements optimized database queries to handle delete operations efficiently.
+
+
