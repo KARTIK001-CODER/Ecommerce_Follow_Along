@@ -1,6 +1,4 @@
-// File: myProducts.jsx
-
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Product from "../components/auth/Product";
 
 export default function MyProducts() {
@@ -11,10 +9,8 @@ export default function MyProducts() {
 
     const fetchProducts = (email) => {
         if (!email) return;
-
         setLoading(true);
         setError(null);
-
         fetch(`http://localhost:3000/api/v2/product/my-products?email=${email}`)
             .then((res) => {
                 if (!res.ok) {
@@ -35,7 +31,7 @@ export default function MyProducts() {
 
     return (
         <div className="w-full min-h-screen bg-neutral-800">
-            <h1 className="text-3xl text-center py-4 text-white">My Products</h1>
+            <h1 className="text-3xl text-center py-4 p-6 text-white">My Products</h1>
             <div className="flex justify-center mb-4">
                 <input
                     type="email"
@@ -51,18 +47,16 @@ export default function MyProducts() {
                     Search
                 </button>
             </div>
-
             {loading && <div className="text-center text-white mt-10">Loading products...</div>}
             {error && <div className="text-center text-red-500 mt-10">Error: {error}</div>}
             {!loading && !error && products.length === 0 && (
                 <div className="text-center text-gray-400">Product not created.</div>
             )}
-
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 p-4">
                 {products.map((product) => (
                     <Product key={product._id} {...product} />
                 ))}
             </div>
         </div>
-    );
+);
 }
