@@ -457,3 +457,63 @@ Ensuring that the email-based filtering mechanism is securely linked to the auth
 ### Error Messaging:
 Providing meaningful and user-friendly error messages in scenarios such as API failures or empty product lists.
 
+# Ecommerce Project: Milestone 13
+
+## Overview
+
+Milestone 13 focuses on enhancing the functionality of the ecommerce platform by enabling the update product feature. This milestone represents a significant step toward providing a robust and dynamic backend for managing product information. The feature ensures that users with the appropriate permissions can seamlessly update existing product details.
+
+## Objectives
+
+Implement an endpoint to allow updates to product details.
+
+Ensure validations and error handling are in place to maintain data integrity.
+
+Provide meaningful responses for both successful and failed update requests.
+
+## Features Added
+
+1. Update Product Feature
+
+Users can update the details of an existing product by providing the necessary data in a structured format.
+
+Supported fields for updates include:
+
+Product name
+
+Description
+
+Price
+
+Stock quantity
+
+Category
+
+2. Validation and Error Handling
+
+Validates that the product exists before attempting an update.
+
+Ensures all required fields are provided in the request.
+
+Handles potential errors such as invalid IDs or missing fields.
+
+3. Dynamic Response Mechanism
+
+Returns a detailed success message with the updated product details if the operation is successful.
+
+Provides descriptive error messages in case of failure, including reasons like:
+
+Product not found
+
+Invalid input data
+
+Database errors
+
+## Key Highlights
+
+Scalability: The code structure is modular, allowing easy addition of new fields or validations in the future.
+
+Security: Ensures that only authorized users can perform update operations.
+
+Performance: Efficient querying and updating mechanisms to minimize response time.
+
