@@ -574,3 +574,39 @@ Provides easy access to different sections of the application.
 Includes links to Home, Products, Cart, and Profile.
 
 Displays login/logout options dynamically based on authentication status.
+
+
+# Milestone 16 - Ecommerce Follow-Along Project
+
+## Overview
+
+This milestone enhances the Ecommerce project by introducing a 'More Info' button for every product, allowing users to view additional product details with ease. The addition of this feature improves user engagement and helps customers make more informed purchase decisions.
+
+## Features Implemented
+
+### More Info Button:
+
+Added to each product listing.
+
+Allows users to view additional product details when clicked.
+
+Enhances the user experience by providing quick access to important product information.
+
+Designed to be responsive and accessible across devices.
+
+### Enhanced Product Display:
+
+Products are now presented with a cleaner layout.
+
+Improved UI/UX for better readability and navigation.
+
+Optimized performance for faster loading times.
+
+## Security & Authentication:
+
+Users must be logged in to access full product details.
+
+Secure handling of user data with JWT-based authentication.
+
+Protected routes ensure that only authorized users can view certain details.
+
