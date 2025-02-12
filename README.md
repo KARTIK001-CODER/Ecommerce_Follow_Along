@@ -559,3 +559,18 @@ Includes safeguards to ensure that deletion requests are authorized.
 Implements optimized database queries to handle delete operations efficiently.
 
 
+# Milestone 15 - Ecommerce Follow-Along Project
+
+## Overview
+
+This milestone focuses on enhancing the Ecommerce project by implementing a navigation bar (navbar) to improve user experience and accessibility.
+
+## Features Implemented
+
+### Navigation Bar (Navbar):
+
+Provides easy access to different sections of the application.
+
+Includes links to Home, Products, Cart, and Profile.
+
+Displays login/logout options dynamically based on authentication status.
