@@ -255,7 +255,7 @@ const CreateProduct = () => {
                   setEmail(p.email);
                   if (p.images && p.images.length > 0) {
                       setPreviewImages(
-                          p.images.map((imgPath) => `http://localhost:8000${imgPath}`)
+                          p.images.map((imgPath) => `http://localhost:3000${imgPath}`)
                       );
                   }
               })
@@ -329,141 +329,141 @@ const CreateProduct = () => {
 
     return (
         <>
-        <NavBar/>
-        <div className="w-[90%] max-w-[500px] bg-white shadow h-auto rounded-[4px] p-4 mx-auto">
-            <h5 className="text-[24px] font-semibold text-center">
-                {isEdit ? "Edit Product" : "Create Product"}
-            </h5>
-            <form onSubmit={handleSubmit}>
-            <div className="mt-4">
-                <label className="pb-1 block">
-                    Email <span className="text-red-500">*</span>
-                </label>
-                <input
-                    type="email"
-                    value={email}
-                    className="w-full p-2 border rounded"
-                    onChange={(e) => setEmail(e.target.value)}
-                    placeholder="Enter your email"
-                    required
-                />
-            </div>
-            <div>
-                <label className="pb-1 block">
-                    Name <span className="text-red-500">*</span>
-                </label>
-                <input
-                    type="text"
-                    value={name}
-                    className="w-full p-2 border rounded"
-                    onChange={(e) => setName(e.target.value)}
-                    placeholder="Enter product name"
-                    required
-                />
-            </div>
-            <div className="mt-4">
-                <label className="pb-1 block">
-                    Description <span className="text-red-500">*</span>
-                </label>
-                <textarea
-                    value={description}
-                    className="w-full p-2 border rounded"
-                    onChange={(e) => setDescription(e.target.value)}
-                    placeholder="Enter product description"
-                    rows="4"
-                    required
-                ></textarea>
-            </div>
-            <div className="mt-4">
-                <label className="pb-1 block">
-                    Category <span className="text-red-500">*</span>
-                </label>
-                <select
-                    className="w-full p-2 border rounded"
-                    value={category}
-                    onChange={(e) => setCategory(e.target.value)}
-                    required
-                >
-                    <option value="">Choose a category</option>
-                    {categoriesData.map((i) => (
-                        <option value={i.title} key={i.title}>
-                            {i.title}
-                        </option>
-                    ))}
-                </select>
-            </div>
-            <div className="mt-4">
-                <label className="pb-1 block">Tags</label>
-                <input
-                    type="text"
-                    value={tags}
-                    className="w-full p-2 border rounded"
-                    onChange={(e) => setTags(e.target.value)}
-                    placeholder="Enter product tags"
-                />
-            </div>
-            <div className="mt-4">
-                <label className="pb-1 block">
-                    Price <span className="text-red-500">*</span>
-                </label>
-                <input
-                    type="number"
-                    value={price}
-                    className="w-full p-2 border rounded"
-                    onChange={(e) => setPrice(e.target.value)}
-                    placeholder="Enter product price"
-                    required
-                />
-            </div>
-            <div className="mt-4">
-                <label className="pb-1 block">
-                    Stock <span className="text-red-500">*</span>
-                </label>
-                <input
-                    type="number"
-                    value={stock}
-                    className="w-full p-2 border rounded"
-                    onChange={(e) => setStock(e.target.value)}
-                    placeholder="Enter stock quantity"
-                    required
-                />
-            </div>
-            <div className="mt-4">
-                <label className="pb-1 block">
-                {isEdit ? "Upload New Images (optional)" : "Upload Images"}{" "}
-                        <span className={isEdit ? "" : "text-red-500"}>*</span>
-                    </label>
-                    <input
-                        name="image"
-                        type="file"
-                        id="upload"
-                        className="hidden"
-                        multiple
-                        onChange={handleImagesChange}
-                        required={!isEdit}
-                    />
-                    <label htmlFor="upload" className="cursor-pointer">
-                        <AiOutlinePlusCircle size={30} color="#555" />
-                    </label>
-                    <div className="flex flex-wrap mt-2">
-                        {previewImages.map((img, index) => (
-                            <img
-                                src={img}
-                                key={index}
-                                alt="Preview"
-                                className="w-[100px] h-[100px] object-cover m-2"
-                            />
-                        ))}
+            <NavBar />
+            <div className="w-[90%] max-w-[500px] bg-white shadow h-auto rounded-[4px] p-4 mx-auto">
+                <h5 className="text-[24px] font-semibold text-center">
+                    {isEdit ? "Edit Product" : "Create Product"}
+                </h5>
+                <form onSubmit={handleSubmit}>
+                    <div className="mt-4">
+                        <label className="pb-1 block">
+                            Email <span className="text-red-500">*</span>
+                        </label>
+                        <input
+                            type="email"
+                            value={email}
+                            className="w-full p-2 border rounded"
+                            onChange={(e) => setEmail(e.target.value)}
+                            placeholder="Enter your email"
+                            required
+                        />
                     </div>
-                </div>
-                <button
-                    type="submit"
-                    className="w-full mt-4 bg-blue-500 text-white p-2 rounded"
-                >
-                {isEdit ? "Save Changes" : "Create"}
-                </button>
-            </form>
-        </div>
+                    <div>
+                        <label className="pb-1 block">
+                            Name <span className="text-red-500">*</span>
+                        </label>
+                        <input
+                            type="text"
+                            value={name}
+                            className="w-full p-2 border rounded"
+                            onChange={(e) => setName(e.target.value)}
+                            placeholder="Enter product name"
+                            required
+                        />
+                    </div>
+                    <div className="mt-4">
+                        <label className="pb-1 block">
+                            Description <span className="text-red-500">*</span>
+                        </label>
+                        <textarea
+                            value={description}
+                            className="w-full p-2 border rounded"
+                            onChange={(e) => setDescription(e.target.value)}
+                            placeholder="Enter product description"
+                            rows="4"
+                            required
+                        ></textarea>
+                    </div>
+                    <div className="mt-4">
+                        <label className="pb-1 block">
+                            Category <span className="text-red-500">*</span>
+                        </label>
+                        <select
+                            className="w-full p-2 border rounded"
+                            value={category}
+                            onChange={(e) => setCategory(e.target.value)}
+                            required
+                        >
+                            <option value="">Choose a category</option>
+                            {categoriesData.map((i) => (
+                                <option value={i.title} key={i.title}>
+                                    {i.title}
+                                </option>
+                            ))}
+                        </select>
+                    </div>
+                    <div className="mt-4">
+                        <label className="pb-1 block">Tags</label>
+                        <input
+                            type="text"
+                            value={tags}
+                            className="w-full p-2 border rounded"
+                            onChange={(e) => setTags(e.target.value)}
+                            placeholder="Enter product tags"
+                        />
+                    </div>
+                    <div className="mt-4">
+                        <label className="pb-1 block">
+                            Price <span className="text-red-500">*</span>
+                        </label>
+                        <input
+                            type="number"
+                            value={price}
+                            className="w-full p-2 border rounded"
+                            onChange={(e) => setPrice(e.target.value)}
+                            placeholder="Enter product price"
+                            required
+                        />
+                    </div>
+                    <div className="mt-4">
+                        <label className="pb-1 block">
+                            Stock <span className="text-red-500">*</span>
+                        </label>
+                        <input
+                            type="number"
+                            value={stock}
+                            className="w-full p-2 border rounded"
+                            onChange={(e) => setStock(e.target.value)}
+                            placeholder="Enter stock quantity"
+                            required
+                        />
+                    </div>
+                    <div className="mt-4">
+                        <label className="pb-1 block">
+                            {isEdit ? "Upload New Images (optional)" : "Upload Images"}{" "}
+                            <span className={isEdit ? "" : "text-red-500"}>*</span>
+                        </label>
+                        <input
+                            name="image"
+                            type="file"
+                            id="upload"
+                            className="hidden"
+                            multiple
+                            onChange={handleImagesChange}
+                            required={!isEdit}
+                        />
+                        <label htmlFor="upload" className="cursor-pointer">
+                            <AiOutlinePlusCircle size={30} color="#555" />
+                        </label>
+                        <div className="flex flex-wrap mt-2">
+                            {previewImages.map((img, index) => (
+                                <img
+                                    src={img}
+                                    key={index}
+                                    alt="Preview"
+                                    className="w-[100px] h-[100px] object-cover m-2"
+                                />
+                            ))}
+                        </div>
+                    </div>
+                    <button
+                        type="submit"
+                        className="w-full mt-4 bg-blue-500 text-white p-2 rounded"
+                    >
+                        {isEdit ? "Save Changes" : "Create"}
+                    </button>
+                </form>
+            </div>
         </>
     );
 };

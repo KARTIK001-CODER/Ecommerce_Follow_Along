@@ -610,3 +610,36 @@ Secure handling of user data with JWT-based authentication.
 
 Protected routes ensure that only authorized users can view certain details.
 
+# 📜 **README - Milestone 17**  
+#### **Feature: Console Logs for Cart Updates**  
+
+### 🚀 **Overview**  
+In this milestone, we implemented console logging for the cart. Each time a product is added or removed, the updated cart state is displayed in the browser console for debugging purposes.  
+
+### 🔧 **Implementation Steps**  
+- Introduced a method to log cart updates whenever the user interacts with the cart.  
+- Ensured logs provide details about the cart's current state, including items added or removed.  
+- Improved tracking of user actions for easier debugging.  
+
+### ✅ **Results**  
+- Developers can monitor cart state changes in real time.  
+- Helps in identifying potential issues related to cart management.  
+- Ensures a smoother debugging experience during development.  
+
+---
+
+# 📜 **README - Milestone 18**  
+#### **Feature: Cart State Persisted in Console**  
+
+### 🚀 **Overview**  
+This milestone enhances the logging mechanism by ensuring the cart state persists across page reloads and continues to be logged in the console.  
+
+### 🔧 **Implementation Steps**  
+- Implemented a method to retain cart data even after the user refreshes the page.  
+- Ensured the cart's previous state is restored and displayed in the console.  
+- Improved logging by tracking both initial cart loading and subsequent updates.  
+
+### ✅ **Results**  
+- The cart remains consistent even after a page refresh.  
+- Console logs now provide a complete history of cart interactions.  
+- Enhances debugging efficiency by keeping track of past and current cart states.

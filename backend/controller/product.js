@@ -8,6 +8,7 @@ const router = express.Router();
 const { pupload } = require("../multer");
 const path = require('path');
 
+
 const validateProductData = (data) => {
   const errors = [];
   if (!data.name) errors.push("Product name is required");
