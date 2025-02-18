@@ -643,3 +643,12 @@ This milestone enhances the logging mechanism by ensuring the cart state persist
 - The cart remains consistent even after a page refresh.  
 - Console logs now provide a complete history of cart interactions.  
 - Enhances debugging efficiency by keeping track of past and current cart states.
+
+# Ecommerce Website - Milestone 19: Functional Cart
+## Overview
+In Milestone 19, the functional cart feature was implemented on the Ecommerce website. This milestone focuses on providing users with an intuitive and seamless way to add products to their cart and view them dynamically within the cart page. The cart updates in real-time as products are added, creating an interactive shopping experience.
+
+## Key Features
+### Add to Cart: Users can add products to their cart with a simple click, and the cart will automatically update to reflect the added item.
+### Product Display in Cart: After adding items, the cart displays the products with relevant details such as product name, image, and price.
+### Dynamic Cart: As products are added, the cart updates dynamically, ensuring that users can easily review their selections.
