@@ -662,3 +662,21 @@ In Milestone 20, we have implemented a Profile Page for the Ecommerce website. T
 ### User Information Display: Users can view their profile information, such as their name and email address, on the profile page.
 ### Order History: A section where users can view their past orders, including order details like product names, quantities, and prices.
 ### Edit Profile: The profile page includes an option to edit personal information, offering users a way to keep their account details up to date.
+
+
+# Milestone 21: Address Form Implementation
+## Overview
+In this milestone, we will create a frontend form to collect user address details.
+
+## Features
+A dedicated address form page
+### Fields: Country, City, Address Line 1 & 2, Zip Code, Address Type
+### State management to store user input
+### Navigation from the profile page via the "Add Address" button
+## Implementation Steps
+### Create an address form component
+### Manage state for user inputs
+### Add navigation from the profile page
+### Style the form for better user experience
+
+This milestone enhances user profile functionality by enabling address storage. 🚀

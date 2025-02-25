@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import AddressCard from "../components/auth/AddressCard";
+import AddressCard from "../Components/auth/AddressCard";
 import NavBar from "../components/auth/nav";
 export default function Profile() {
 	const [personalDetails, setPersonalDetails] = useState({
@@ -13,7 +13,7 @@ export default function Profile() {
 	const navigate = useNavigate();
 	useEffect(() => {
 		fetch(
-			`http://localhost:3000/api/v2/user/profile?email=${"0011kartikchoudhary@gmail.com"}`,
+			`http://localhost:3000/api/v2/user/profile?email=${"Harshh@gmail.com"}`,
 			{
 				method: "GET",
 				headers: {
