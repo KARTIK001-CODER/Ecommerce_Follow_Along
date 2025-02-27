@@ -680,3 +680,21 @@ A dedicated address form page
 ### Style the form for better user experience
 
 This milestone enhances user profile functionality by enabling address storage. 🚀
+
+
+
+# 📌 Milestone 22: Add Address to User Collection
+## 📝 Task Overview
+Create an endpoint that receives an address from the frontend and adds it to the address array inside the User collection.
+
+## 🚀 Steps to Implement
+### Create the API Route – Define an endpoint to handle address submissions.
+### Validate & Process Data – Ensure the received address is valid before saving.
+### Update User Collection – Append the new address to the address array in the database.
+### Test the Endpoint – Use Thunder Client or Postman to verify the implementation.
+### Commit & Push Changes – Submit the changes, request an AI review, and create a PR.
+# ✅ Submission Checklist
+1. API route created & tested
+2. Address successfully stored in the database
+3. PR created with an AI review request
+4. Demo video recorded & submitted
