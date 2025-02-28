@@ -698,3 +698,27 @@ Create an endpoint that receives an address from the frontend and adds it to the
 2. Address successfully stored in the database
 3. PR created with an AI review request
 4. Demo video recorded & submitted
+
+# 🎯 Milestone 23: Place Order & Address Selection
+
+## Overview
+
+In this milestone, we have enhanced the checkout process by introducing a "Place Order" button in the cart. This feature allows users to proceed with their purchase by selecting a preferred delivery address, ensuring a seamless and convenient shopping experience.
+
+## Features Implemented
+
+"Place Order" Button: A dedicated button in the cart that initiates the order placement process.
+
+Address Selection: Users can choose from their saved addresses or enter a new one before confirming their order.
+
+Enhanced User Experience: A streamlined checkout flow for better navigation and convenience.
+
+Order Confirmation: Once the address is selected, users receive an order confirmation message.
+
+## Benefits
+
+Simplified Checkout: Reduces the number of steps required to complete a purchase.
+
+User-Friendly Interface: Ensures a smooth and intuitive process for selecting the delivery address.
+
+Improved Order Accuracy: Helps in preventing errors by allowing users to review their address before confirming the order.
