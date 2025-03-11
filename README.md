@@ -757,3 +757,26 @@ Navigate to the cart/checkout page.
 Click the "Place Order" button.
 
 Open the browser console and check for the message "Order Successful."
+
+# Milestone 26 - Creating a GET Route in order.js
+
+## Overview
+
+In this milestone, we created a GET route in order.js to fetch order details from the backend.
+
+## Key Features
+
+Implemented a GET route in order.js.
+
+Allows retrieval of order data via API.
+
+Lays the foundation for displaying user orders in the frontend.
+
+## Testing Steps
+
+Start the backend server.
+
+Send a GET request to the order endpoint using Postman or a browser.
+
+Verify that order details are returned as a response.
+
