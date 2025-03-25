@@ -831,4 +831,32 @@ In this milestone, we enhanced the *My Orders* page by adding a *Cancel Order* b
 
 ## In this milestone, we set up PayPal for online payments. First, create a PayPal developer account and log in to the PayPal Developer Dashboard. Navigate to Sandbox Accounts, create an account if needed, and save the User ID. Next, obtain and save your Client ID from the sandbox account. Update the order confirmation page to include two payment options: Cash on Delivery (COD) and Online Payment (PayPal). Implement radio buttons to toggle between these options, ensuring the PayPal button appears when Online Payment is selected. In the next milestone, we will integrate the PayPal payment buttons into the application.
 
-🚀 *Milestone 29 completed successfully!*
+🚀 *Milestone 29 and 30 completed successfully!*
+
+# Milestone 31 - Ecommerce Follow-Along Project
+## Overview
+This milestone introduces Redux Toolkit for improved state management and integrates PayPal for seamless payment processing.
+
+## Features Implemented
+Redux Toolkit Integration
+Centralized state management using Redux Toolkit.
+
+Created a Redux store (store.js) to manage user authentication.
+
+Added userActions.js to handle authentication state updates.
+
+Integrated Redux Provider in main.jsx for global state access.
+
+## Authentication Enhancements
+Login and Signup components now dispatch user email to Redux store.
+
+Improved authentication state management across the app.
+
+## PayPal Payment Integration
+Integrated PayPal using @paypal/react-paypal-js.
+
+Securely stored PayPal Client ID in .env.
+
+Updated OrderConfirmation.jsx to fetch PayPal credentials dynamically.
+
+🚀 *Milestone 31 completed successfully!*

@@ -205,7 +205,7 @@ const OrderConfirmation = () => {
                              <div className='mt-4' style={{ maxWidth: '500px' }}>
                                  <PayPalScriptProvider
                                      options={{
-                                         'client-id': "AZ7t77Zf0Ab9MKCJTCXo3Y9OcauO4xbBgnLth3JppAYsoOs4ZbhSeKYPZhnXAvOhl0wWLmFpMKRRyiRa", 
+                                        'client-id': import.meta.env.VITE_CLIENT_ID, 
                                      }}
                                  >
                                      <PayPalButtons
