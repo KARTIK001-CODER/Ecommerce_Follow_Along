@@ -61,7 +61,6 @@ router.post(
       return next(new ErrorHandler("Invalid Email or Password", 401));
     }
     const isPasswordMatched = await bcrypt.compare(password, user.password);
-    console.log("At Auth", "Password: ", password, "Hash: ", user.password);
     if (!isPasswordMatched) {
       return next(new ErrorHandler("Invalid Email or Password", 401));
     }

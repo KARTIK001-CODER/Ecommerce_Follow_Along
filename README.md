@@ -860,3 +860,30 @@ Securely stored PayPal Client ID in .env.
 Updated OrderConfirmation.jsx to fetch PayPal credentials dynamically.
 
 🚀 *Milestone 31 completed successfully!*
+
+# Milestone 32: Managing Global State in Login and Other Pages
+
+## Overview
+
+In this milestone, we will implement global state management for storing the email entered on the login page. The email will be stored using Redux and will be accessible across all pages using useSelector.
+
+# Milestone 33 - JWT Token & Cookie Storage
+
+## 1Overview
+
+In this milestone, we will learn how to implement JWT (JSON Web Token) authentication in a Node.js application.
+JWT is used to securely transmit information between parties as a JSON object.
+We will generate a JWT token, store it inside an HTTP-only cookie, and send it to the client upon successful authentication.
+
+### Learning Goals
+By the end of this milestone, you will:
+1. Learn how to create a JWT token.
+2. Understand how to store tokens inside cookies for authentication.
+
+### Features
+1. Generate JWT Token using the jsonwebtoken package.
+2. Store JWT Token in HTTP-only Cookies for better security.
+3. Set Token Expiry using the maxAge property.
+4. Send Token in Response to maintain user authentication
+
+🚀 *Milestone 32 and 33 completed successfully!*
