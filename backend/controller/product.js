@@ -7,6 +7,7 @@ const User = require("../model/user");
 const router = express.Router();
 const { pupload } = require("../multer");
 const path = require('path');
+const { isAuthenticatedUser } = require('../middleware/auth');
 
 
 const validateProductData = (data) => {
@@ -22,7 +23,7 @@ const validateProductData = (data) => {
   return errors;
 };
 router.post(
-  "/create-product",
+  "/create-product", isAuthenticatedUser,
   pupload.array("images", 10),
   async (req, res) => {
     console.log("🛒 Creating product");
@@ -97,7 +98,7 @@ router.get("/get-products", async (req, res) => {
   }
 });
   
-  router.get("/my-products", async (req, res) => {
+  router.get("/my-products", isAuthenticatedUser, async (req, res) => {
     const { email } = req.query;
     try {
       const products = await Product.find({ email });
@@ -116,7 +117,7 @@ router.get("/get-products", async (req, res) => {
     }
   });
   
-  router.get('/product/:id', async (req, res) => {
+  router.get('/product/:id', isAuthenticatedUser, async (req, res) => {
     console.log("Fetching products...");
     const { id } = req.params;
     try {
@@ -131,7 +132,7 @@ router.get("/get-products", async (req, res) => {
     }
   });
   
-  router.put('/update-product/:id', pupload.array('images', 10), async (req, res) => {
+  router.put('/update-product/:id', isAuthenticatedUser, pupload.array('images', 10), async (req, res) => {
     const { id } = req.params;
     const { name, description, category, tags, price, stock, email } = req.body;
     try {
@@ -174,7 +175,7 @@ router.get("/get-products", async (req, res) => {
         res.status(500).json({ error: 'Server error. Could not update product.' });
     }
   });
-  router.delete("/delete-product/:id", async (req, res) => {
+  router.delete("/delete-product/:id", isAuthenticatedUser, async (req, res) => {
     const { id } = req.params;
   
     try {
@@ -191,7 +192,7 @@ router.get("/get-products", async (req, res) => {
     }
   });
   
-  router.post("/cart", async (req, res) => {
+  router.post("/cart", isAuthenticatedUser, async (req, res) => {
     try {
       const { userId, productId, quantity } = req.body;
       const email = userId;
@@ -241,7 +242,7 @@ router.get("/get-products", async (req, res) => {
   });
   
   // GET cart details endpoint
-  router.get("/cartproducts", async (req, res) => {
+  router.get("/cartproducts", isAuthenticatedUser, async (req, res) => {
     try {
       const { email } = req.query;
       if (!email) {
@@ -266,7 +267,7 @@ router.get("/get-products", async (req, res) => {
     }
   });
   
-  router.put("/cartproduct/quantity", async (req, res) => {
+  router.put("/cartproduct/quantity", isAuthenticatedUser, async (req, res) => {
     const { email, productId, quantity } = req.body;
     console.log("Updating cart product quantity");
   
